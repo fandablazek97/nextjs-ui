@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* Variables */
+@import "theme/variables.css";
+
+/* Tailwind */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss/variants";
+
+/* @layer base {
+  ...
+} */
+
+/* @layer components {
+  ...
+} */
+
+/* @layer utilities {
+  ...
+} */

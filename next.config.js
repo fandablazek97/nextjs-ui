@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
 
-module.exports = nextConfig
+  // Change output folder structure for static export: https://nextjs.org/docs/api-reference/next.config.js/trailing-slash
+  trailingSlash: true,
+};
+
+module.exports = nextConfig;
