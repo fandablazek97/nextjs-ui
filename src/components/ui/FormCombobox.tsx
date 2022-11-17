@@ -85,6 +85,7 @@ const FormCombobox = forwardRef<Ref, FormComboboxProps>(
       // Component Markup
       <Combobox
         as={"div"}
+        name={name}
         value={selectedOption}
         onChange={setSelectedOption}
         className={`w-full ${className}`}
@@ -106,7 +107,6 @@ const FormCombobox = forwardRef<Ref, FormComboboxProps>(
           <Combobox.Input
             ref={ref}
             as={"input"}
-            name={name}
             onChange={(event) => setQuery(event.target.value)}
             className={`
             ${cvs.base}
@@ -126,12 +126,12 @@ const FormCombobox = forwardRef<Ref, FormComboboxProps>(
 
           {/* Options */}
           <Combobox.Options
-            className={`absolute left-0 right-0 top-14 w-full bg-body py-1 shadow-lg dark:bg-body-100 dark:shadow-none ${
+            className={`absolute left-0 right-0 top-14 max-h-[320px] w-full overflow-y-scroll bg-body py-1 shadow-lg dark:bg-body-100 dark:shadow-none ${
               radius === "full" ? cvs.radius.xl : cvs.radius[radius]
             }`}
           >
-            {filteredOptions.map((option) => (
-              <Combobox.Option key={option} value={option} className={`py-2`}>
+            {filteredOptions.map((option, i) => (
+              <Combobox.Option key={i} value={option} className={`py-2`}>
                 {({ active, selected }) => (
                   <li
                     className={`flex items-center justify-start gap-2 py-2 px-3 ${

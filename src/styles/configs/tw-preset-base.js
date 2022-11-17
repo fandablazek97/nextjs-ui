@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   theme: {
     screens: {
@@ -11,10 +13,10 @@ module.exports = {
       "2xl": "1600px",
     },
     fontFamily: {
-      sans: "var(--font-sans)",
-      display: "var(--font-displas)",
-      serif: "var(--font-seris)",
-      mono: "var(--font-mons)",
+      sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+      display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
+      serif: ["var(--font-serif)", ...defaultTheme.fontFamily.serif],
+      mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
     },
     extend: {
       fontSize: {

@@ -10,6 +10,7 @@ import SocialLinks from "@ui/SocialLinks";
 import Spinner from "@ui/Spinner";
 import Wrapper from "@ui/Wrapper";
 import type { NextPage } from "next";
+import Avatar from "@ui/Avatar";
 
 // ToDo
 // ----------------------
@@ -200,6 +201,12 @@ const Home: NextPage = () => {
             assumenda?
           </Accordion>
         </div>
+        <Avatar name="First Middle Last" size="xs" />
+        <Avatar name="First Middle Last" size="sm" />
+        <Avatar name="First Middle Last" size="md" />
+        <Avatar name="First Middle Last" size="lg" />
+        <Avatar name="First Middle Last" size="xl" />
+        <Avatar name="First Middle Last" size="2xl" />
       </Wrapper>
     </>
   );
